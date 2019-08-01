@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính</title>
+</head>
+<body>
+<input type="number" value="" id="numb1">
+<input type="number" value="" id="numb2">
+<div style="padding-top: 10px ">
+<button type="button" value="+" onclick="fun('add')">addition(+)</button>
+<button type="button" value="-" onclick="fun('sub')">subtraction(-)</button>
+<button type="button" value="*" onclick="fun('mul')">multiplication(*)</button>
+<button type="button" value="/" onclick="fun('divi')">division(/)</button>
+<p id="resu"> </p>
+</div>
+
+<script>
+
+    
+    function fun(calcu) {
+        let num1 = Number(document.getElementById("numb1").value);
+        let num2 = Number(document.getElementById("numb2").value);
+
+
+        if (calcu == "add") {
+            result = num1 + num2;
+        }
+        else if (calcu == "sub") {
+            result = num1 - num2;
+        }
+        else if (calcu == "mul") {
+            result = num1 * num2;
+        }
+        else if (calcu == "divi") {
+            result = num1 / num2;
+        }
+        document.getElementById("resu").innerHTML = "Result Division :" + result;
+
+    }
+
+</script>
+</body>
+</html>
